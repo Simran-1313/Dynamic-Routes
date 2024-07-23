@@ -25,7 +25,7 @@ export default async function ProductPage({params}){
         <div className=" border-[1px] rounded-lg p-6 mt-5"> <h2 className="flex justify-center text-xl text-gray-500 font-semibold">Reviews</h2>
         {
             product &&(
-                product.reviews.map((review)=>(<div className=" ">
+                product.reviews.map((review,index)=>(<div className=" " key={index}>
                     <p className="mt-5 text-green-600 font-semibold  ">{review.reviewerName} &nbsp;Rating -
                         {review.rating}</p>
                     
